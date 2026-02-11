@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Promise Day 💍</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fad0c4,#ffdde1);
+    font-family: 'Segoe UI', sans-serif;
+    overflow:hidden;
+}
+
+/* Heart Base */
+.heart{
+    position:absolute;
+    transform:rotate(45deg);
+    animation:floatUp linear infinite;
+    opacity:0.8;
+}
+
+.heart::before,
+.heart::after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+}
+
+/* Different Heart Sizes */
+.small{ width:15px; height:15px; }
+.small::before, .small::after{ width:15px; height:15px; }
+
+.medium{ width:25px; height:25px; }
+.medium::before, .medium::after{ width:25px; height:25px; }
+
+.large{ width:40px; height:40px; }
+.large::before, .large::after{ width:40px; height:40px; }
+
+/* Position Circles */
+.heart::before{ top:-50%; left:0; }
+.heart::after{ left:-50%; top:0; }
+
+/* Colors */
+.red{ background:#ff4b7d; }
+.red::before, .red::after{ background:#ff4b7d; }
+
+.pink{ background:#ff85a2; }
+.pink::before, .pink::after{ background:#ff85a2; }
+
+.white{ background:#ffffff; }
+.white::before, .white::after{ background:#ffffff; }
+
+/* Smooth Floating Animation */
+@keyframes floatUp{
+    0%{
+        transform:translateY(0) translateX(0) rotate(45deg);
+        opacity:0.9;
+    }
+    50%{
+        transform:translateY(-400px) translateX(30px) rotate(45deg);
+    }
+    100%{
+        transform:translateY(-800px) translateX(-30px) rotate(45deg);
+        opacity:0;
+    }
+}
+
+/* Card */
+.card{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+    text-align:center;
+    max-width:350px;
+    animation:fadeIn 2s ease;
+    z-index:10;
+}
+
+.card h1{
+    color:#ff4b7d;
+    margin-bottom:20px;
+}
+
+.card p{
+    color:#555;
+    font-size:16px;
+    line-height:1.6;
+}
+
+.signature{
+    margin-top:25px;
+    font-weight:bold;
+    color:#ff4b7d;
+}
+
+@keyframes fadeIn{
+    from{ opacity:0; transform:translateY(20px);}
+    to{ opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating Hearts -->
+<div class="heart small red" style="left:10%; animation-duration:10s;"></div>
+<div class="heart medium pink" style="left:25%; animation-duration:14s;"></div>
+<div class="heart large red" style="left:40%; animation-duration:18s;"></div>
+<div class="heart small white" style="left:60%; animation-duration:12s;"></div>
+<div class="heart medium red" style="left:75%; animation-duration:16s;"></div>
+<div class="heart large pink" style="left:90%; animation-duration:20s;"></div>
+
+<!-- Card -->
+<div class="card">
+    <h1>Happy Promise Day 💖</h1>
+    <p>
+        Today I make a promise to you…  
+        I promise to stand beside you and take care of you amma , I promise to change anything that may or had hurt you in even slightest way , I love you more than anything amma you are my life and my soul  💗
+        and I will never let you feel alone.
+I love you forever amma ♾️💖
+    </p>
+    <p>
+        No matter what happens,  
+        my care, respect, and love  
+        will always remain constant.
+    </p>
+    <div class="signature">
+        Forever Yours ♥️
+    </div>
+</div>
+
+</body>
+</html>
